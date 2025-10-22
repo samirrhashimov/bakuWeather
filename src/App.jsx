@@ -5,6 +5,13 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa";
 import { TbUvIndex } from "react-icons/tb";
 import { FaWind } from "react-icons/fa";
+import { IoMdSunny } from "react-icons/io";
+import { IoIosPartlySunny } from "react-icons/io";
+import { IoIosCloudy } from "react-icons/io";
+import { RiFoggyFill } from "react-icons/ri";
+import { IoRainy } from "react-icons/io5";
+import { FaRegSnowflake } from "react-icons/fa";
+import { TiWeatherStormy } from "react-icons/ti";
 
 function App() {
 
@@ -13,6 +20,8 @@ function App() {
   const [uvindex, setLastUV] = useState(null);
   const [visibilitycode, setLastVisibility] = useState(null);
   const [windcode, setLastWind] = useState(null);
+
+  
 
   const url = 'https://api.open-meteo.com/v1/forecast?latitude=40.37&longitude=49.89&hourly=temperature_2m,weather_code,visibility,uv_index,wind_speed_10m&timezone=auto&forecast_days=1'
   fetch(url)
@@ -25,7 +34,7 @@ function App() {
       const temps = data.hourly.temperature_2m;
       const currenttemp = temps[temps.length - 1];
       const TempDisplay = document.querySelector("#TempDisplay");
-      TempDisplay.innerHTML = currenttemp
+      TempDisplay.innerHTML = currenttemp;
 
       // Weather code fetch
       const wcode = data.hourly.weather_code;
@@ -34,21 +43,28 @@ function App() {
       const WcodeDisplay = document.querySelector("#WcodeDisplay");
 
       if (current <= 1) {
-        WcodeDisplay.innerHTML = "Clear"
+        WcodeDisplay.innerHTML = "Sunny";
+        document.querySelector("#sunnyIcon").classList.remove("hidden");
       } else if (current === 2) {
-        WcodeDisplay.innerHTML = "Partly Cloudy"
+        WcodeDisplay.innerHTML = "Partly Cloudy";
+        document.querySelector("#partlyCloudyIcon").classList.remove("hidden");
       } else if (current === 3) {
-        WcodeDisplay.innerHTML = "Cloudy"
+        WcodeDisplay.innerHTML = "Cloudy";
+        document.querySelector("#cloudyIcon").classList.remove("hidden");
       } else if (current >= 45 && current <= 48) {
-        WcodeDisplay.innerHTML = "Foggy"
+        WcodeDisplay.innerHTML = "Foggy";
+        document.querySelector("#foggyIcon").classList.remove("hidden");
       } else if (current >= 61 && current <= 65) {
-        WcodeDisplay.innerHTML = "Rainy"
+        WcodeDisplay.innerHTML = "Rainy";
+        document.querySelector("#rainyIcon").classList.remove("hidden");
       } else if (current >= 71 && current <= 76) {
-        WcodeDisplay.innerHTML = "Snowy"
+        WcodeDisplay.innerHTML = "Snowy";
+        document.querySelector("#snowyIcon").classList.remove("hidden");
       } else if (current >= 95 && current <= 99) {
         WcodeDisplay.innerHTML = "Stormy"
+        document.querySelector("#stormyIcon").classList.remove("hidden");
       } else {
-        WcodeDisplay.innerHTML = "No Information"
+        WcodeDisplay.innerHTML = ""
       }
 
 
@@ -88,10 +104,42 @@ function App() {
             <FaLocationDot />
             <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] ml-2">Baku</h2>
           </div>
+          <div>
+            <h2 className="font-bold text-lg">bakuWeather</h2>
+          </div>
         </div>
         {/* <!-- Main Content --> */}
         <div className="flex-grow flex flex-col items-center justify-center p-4">
           {/* <!-- Current Weather Section --> */}
+          <span id="sunnyIcon" className="material-symbols-outlined text-8xl text-primary hidden" style={{ fontSize: 96 }}>
+            <IoMdSunny />
+          </span>
+
+          <span id="partlyCloudyIcon" className="material-symbols-outlined text-8xl text-primary hidden" style={{ fontSize: 96 }}>
+            <IoIosPartlySunny />
+          </span>
+
+          <span id="cloudyIcon" className="material-symbols-outlined text-8xl text-primary hidden" style={{ fontSize: 96 }}>
+            <IoIosCloudy />
+          </span>
+
+          <span id="foggyIcon" className="material-symbols-outlined text-8xl text-primary hidden" style={{ fontSize: 96 }}>
+            <RiFoggyFill />
+          </span>
+
+          <span id="rainyIcon" className="material-symbols-outlined text-8xl text-primary hidden" style={{ fontSize: 96 }}>
+            <IoRainy />
+          </span>
+
+          <span id="snowyIcon" className="material-symbols-outlined text-8xl text-primary hidden" style={{ fontSize: 96 }}>
+            <FaRegSnowflake  />
+          </span>
+
+          <span id="stormyIcon" className="material-symbols-outlined text-8xl text-primary hidden" style={{ fontSize: 96 }}>
+            <TiWeatherStormy />
+          </span>
+
+
           <div className="flex flex-row items-center text-center">
             <h1 id="TempDisplay" className="text-6xl font-bold leading-tight mt-4"></h1><p className="text-6xl font-bold leading-tight mt-4 text-gray-600">°C</p>
           </div>
