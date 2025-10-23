@@ -1,7 +1,48 @@
 @import "tailwindcss";
 
+* {
+    box-sizing: border-box;
+}
 
 .cards {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    
+}
+
+.mainsetting {
+    height: 100vh;
+}
+
+.cityList {
+    background-color: rgb(51, 51, 51);
+    padding: 20px;
+    width: 50%;
+    border-radius: 25px;
+}
+
+.cityList input {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid #777;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.cityList ul {
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px 0;
+    background-color: #fff;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+ul li:hover {
+    background-color: #e6e6e6;
 }
