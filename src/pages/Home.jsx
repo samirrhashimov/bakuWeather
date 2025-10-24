@@ -8,8 +8,8 @@ function Home() {
     const navigate = useNavigate();
     const [query, setQuery] = useState("");
     const options = [
-        { name: "Home", path: "/" },
         { name: "Baku", path: "/baku" },
+        { name: "Sumgait", path: "/sumgait" }
     ];
 
     const filteredOptions = options.filter(opt =>
@@ -18,17 +18,20 @@ function Home() {
 
     return (
         <div className='mainsetting flex flex-col items-center justify-center items-center align-middle'>
+            <div>
+                <h2 className="font-bold text-lg mb-10">bakuWeather</h2>
+            </div>
             <div className='cityList flex flex-col justify-center'>
                 <input
                     type="text"
-                    placeholder="Search Cities:"
+                    placeholder="Search Cities"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                 />
                 <ul>
                     {filteredOptions.map((opt) => (
                         <li key={opt.path} onClick={() => navigate(opt.path)}>
-                            <FaLocationDot/> {opt.name}
+                            <FaLocationDot /> {opt.name}
                         </li>
                     ))}
                 </ul>
