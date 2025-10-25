@@ -28,13 +28,13 @@ function Home() {
 
     return (
         <div className='mainsetting flex flex-col items-center justify-center items-center align-middle'>
-            <div className='map'>
+             <div>
+                <h2 className="font-bold text-lg mb-8 mt-5">bakuWeather</h2>
+            </div>
+            <div className='mapArea'>
                 <AzerbaijanMap />
             </div>
             <div className='cityContainer flex flex-col items-center justify-center items-center align-middle'>
-            <div>
-                <h2 className="font-bold text-lg mb-10">bakuWeather</h2>
-            </div>
             <div className='cityList flex flex-col justify-center'>
                 <input
                     type="text"

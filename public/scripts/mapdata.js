@@ -1,7 +1,7 @@
 var simplemaps_countrymap_mapdata={
   main_settings: {
    //General settings
-    width: "responsive", //'700' or 'responsive'
+    width: "400",
     background_color: "#FFFFFF",
     background_transparent: "yes",
     border_color: "#ffffff",
@@ -11,7 +11,7 @@ var simplemaps_countrymap_mapdata={
     state_url: "",
     border_size: "0.5",
     all_states_inactive: "no",
-    all_states_zoomable: "yes",
+    all_states_zoomable: "no",
     location_description: "",
     location_url: "",
     location_color: "#FF0067",
@@ -37,15 +37,15 @@ var simplemaps_countrymap_mapdata={
     hide_eastern_labels: "no",
    
     //Zoom settings
-    zoom: "yes",
-    manual_zoom: "yes",
+    zoom: "no",
+    manual_zoom: "no",
     back_image: "no",
     initial_back: "no",
     initial_zoom: "-1",
     initial_zoom_solo: "no",
     region_opacity: 1,
     region_hover_opacity: 0.6,
-    zoom_out_incrementally: "yes",
+    zoom_out_incrementally: "no",
     zoom_percentage: 0.99,
     zoom_time: 0.5,
     

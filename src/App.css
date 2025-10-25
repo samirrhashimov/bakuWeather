@@ -37,12 +37,13 @@
     height: 100vh;
 }
 
-.map {
+.mapArea {
   display: flex;
   justify-content: center;
-  width: 500px;
-  height: 400px;
+  max-height: 300px;
+  margin-bottom: 50px;
 }
+
 .cityContainer {
     width: 100%;
 }
@@ -69,7 +70,7 @@
     padding: 10px 0 0 0;
     cursor: pointer;
     font-weight: 500;
-    height: 150px;
+    height: 100px;
     overflow: auto;
 }
 
