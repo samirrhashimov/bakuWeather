@@ -99,7 +99,7 @@ function Baku() {
     <div className="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
       <div className="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
         {/*Top App Bar*/}
-        <Navbar/>
+        <Navbar city="Baku" />
         {/* <!-- Main Content --> */}
         <div className="flex-grow flex flex-col items-center justify-center p-4">
           {/* <!-- Current Weather Section --> */}

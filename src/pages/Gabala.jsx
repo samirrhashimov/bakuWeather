@@ -13,7 +13,7 @@ import { IoRainy } from "react-icons/io5";
 import { FaRegSnowflake } from "react-icons/fa";
 import { TiWeatherStormy } from "react-icons/ti";
 
-function Sumgait() {
+function Gabala() {
 
   const [lastTemp, setLastTemp] = useState(null);
   const [lastWcode, setLastWcode] = useState(null);
@@ -23,7 +23,7 @@ function Sumgait() {
 
   
 
-  const url = 'https://api.open-meteo.com/v1/forecast?latitude=40.5897&longitude=49.6686&hourly=temperature_2m,weather_code,visibility,uv_index,wind_speed_10m&timezone=auto&forecast_days=1'
+  const url = 'https://api.open-meteo.com/v1/forecast?latitude=40.9814&longitude=47.8458&hourly=temperature_2m,weather_code,visibility,uv_index,wind_speed_10m&timezone=auto&forecast_days=1'
   fetch(url)
     .then(response => {
       if (!response.ok) throw new Error('HTTP error ' + response.status)
@@ -99,7 +99,7 @@ function Sumgait() {
     <div className="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
       <div className="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
         {/*Top App Bar*/}
-        <Navbar city="Sumgait"/>
+        <Navbar city="Gabala" />
         {/* <!-- Main Content --> */}
         <div className="flex-grow flex flex-col items-center justify-center p-4">
           {/* <!-- Current Weather Section --> */}
@@ -173,4 +173,4 @@ function Sumgait() {
   )
 }
 
-export default Sumgait
+export default Gabala
