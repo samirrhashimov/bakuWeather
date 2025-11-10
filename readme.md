@@ -1,8 +1,15 @@
-# bakuWeather
+<h1 align="center">bakuWeather – Weather Application</h1>
 
-# Weather Application
+<p align="center">
+<img src="https://skillicons.dev/icons?i=html,css,js,react,netlify" />
+</p>
+<p align="center">
+   <img src="https://img.shields.io/github/license/samirrhashimov/bakuWeather?style=flat">
+   <img src="https://img.shields.io/github/repo-size/samirrhashimov/bakuWeather?style=flat">
+   <img src="https://img.shields.io/github/languages/top/samirrhashimov/bakuWeather?style=flat">
+</p>
 
-This application provides current weather information for selected cities. Built with modern React and SPA architecture, it offers a smooth and user-friendly interface for fast city navigation.
+<p align="center">This application provides current weather information for selected cities. Built with modern React and SPA architecture, it offers a smooth and user-friendly interface for fast city navigation.</p>
 
 ## Features
 
@@ -58,6 +65,10 @@ npm run build
 - Open Meteo (Weather API)
 
 ## License
+This project is licensed under the **MIT License**. For more details, see the [LICENSE](LICENSE) file.
 
-This project is licensed under the MIT License.
+---
+## Support
+
+For issues and questions, please open an issue on GitHub.
 
